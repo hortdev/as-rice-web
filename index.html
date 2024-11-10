@@ -9,17 +9,17 @@
     <link rel="icon" href="assest/img/logo.png">
     <!-- Remix icons link -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
 </head>
 <body>
-    <div>
+    <a id="top"></a>
+    <header class="header">
         <nav class="nav-width-height">
             <div class="nav-items">
                 <div class="logo">
                     <img src="assest/img/logo.png" alt="logo">
                 </div>
                 <div class="search-box">
-                    <input class="search" type="text"  placeholder="Search...">
+                    <input class="search" type="text" placeholder="Search...">
                     <i class="search-icons-style ri-search-line"></i>
                 </div>
                 <div class="icons">
@@ -29,58 +29,61 @@
                 </div>
             </div>
             <div class="page-name">
-                <a class="animation-hover" href="#">Home</a>
-                <a class="animation-hover" href="#">Service</a>
-                <a class="animation-hover" href="#">Product</a>
-                <a class="animation-hover" href="#">About us</a>
-                <a class="animation-hover" href="#">Contact</a>
-                <a class="animation-hover" href="#">Support</a>
+                <a class="animation-hover" href="#top">Home</a>
+                <a class="animation-hover" href="#service-section">Service</a>
+                <a class="animation-hover" href="#categories-section">Categories</a>
+                <a class="animation-hover" href="#package-section">Rice Package</a>
+                <a class="animation-hover" href="#team-section">Our Team</a>
+                <a class="animation-hover" href="#overlay">About us</a>
+                <a class="animation-hover" href="#footer-section">Contact</a>
             </div>
         </nav>
-        <div class="banner">
-            <div class="overlay">
+    </header>
+    <main>
+        <section class="banner">
+            <div class="overlay" id="overlay">
                 <h1>Get ready to explore ours product</h1>
             </div>
-        </div>
-        <div class="welcome-section">
+        </section>
+        <section class="welcome-section">
             <h1>Welcome to Our Website</h1>
             <hr class="underline">
             <p>"At Phnom Penh Top Rice, we bring you the finest selection of rice products, carefully sourced for quality and taste. Our mission is to provide you with premium rice for every meal, whether it's a simple dinner or a special occasion. Explore our variety of options, from aromatic basmati to organic brown rice, and experience the difference in every grain."</p>
-        </div>
-        <div class="service-section">
+        </section>
+        <!-- Service Section -->
+        <section class="service-section" id="service-section">
             <h2>Service</h2>
             <div class="card-container">
-                <div class="card">
+                <div class="service-card">
                     <h3>Planning</h3>
                     <img src="/assest/img/handshake-icon.png" alt="Planning Icon">
                     <p>Our expert team helps plan the best solutions tailored to your needs, ensuring quality and satisfaction.</p>
                     <button>Read more <i class="ri-skip-right-fill"></i></button>
                 </div>
-                <div class="card">
+                <div class="service-card">
                     <h3>Planning</h3>
                     <img src="/assest/img/handshake-icon.png" alt="Planning Icon">
                     <p>With years of expertise, our team delivers the finest rice products, crafted to meet your highest standards and expectations.</p>
                     <button>Read more <i class="ri-skip-right-fill"></i></button>
                 </div>
-                <div class="card">
+                <div class="service-card">
                     <h3>Planning</h3>
                     <img src="/assest/img/handshake-icon.png" alt="Planning Icon">
                     <p>We’re dedicated to offering premium rice products, tailored to your needs while upholding the highest standards of quality.</p>
                     <button>Read more <i class="ri-skip-right-fill"></i></button>
                 </div>
-                <div class="card">
+                <div class="service-card">
                     <h3>Planning</h3>
                     <img src="/assest/img/handshake-icon.png" alt="Planning Icon">
                     <p>Our team provides personalized rice solutions, ensuring consistency, excellence, and satisfaction.</p>
                     <button>Read more <i class="ri-skip-right-fill"></i></button>
                 </div>
-                
             </div>
-        </div>
+        </section>
         <!-- Categories Section -->
-        <div class="categories-section">
+        <section class="categories-section" id="categories-section">
             <h2>Categories</h2>
-            <p>this is our popular categories</p>
+            <p>This is our popular categories</p>
             <div class="categories-container">
                 <div class="category-card">
                     <h3>Arborio Rice</h3>
@@ -131,12 +134,11 @@
                     <p class="uses">USE IN BOWLS FOR A NUTRITIOUS BASE</p>
                 </div>
             </div>
-        </div>
-
-        <!-- package Section -->
-        <div class="package-section">
+        </section>
+        <!-- Package Section -->
+        <section class="package-section" id="package-section">
             <h2>Rice Package</h2>
-            <p>this is the quality of our packaging</p>
+            <p>This is the quality of our packaging</p>
             <div class="package-container">
                 <div class="package-card">
                     <h3>GOLD</h3>
@@ -187,9 +189,101 @@
                     <p class="uses">Vibrant packaging in energetic orange and fiery red, creating a bold and dynamic visual impact</p>
                 </div>
             </div>
+        </section>
+        <!-- Team Section -->
+        <section class="team-section" id="team-section">
+            <h2>Together is Together</h2>
+            <p class="subtitle">Meet our team with a new evaluation development for a new website</p>
+            <div class="team-container">
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/danit.jpg" alt="Sinoeun Danit">
+                    </div>
+                    <p class="name">Sinoeun Danit</p>
+                    <p class="role co-leader">Co-Leader</p>
+                </div>
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/hort.jpg" alt="Leng Senghort">
+                    </div>
+                    <p class="name">Leng Senghort</p>
+                    <p class="role leader">Leader</p>
+                </div>
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/sarith.JPG" alt="Soun Eksarith">
+                    </div>
+                    <p class="name">Soun Eksarith</p>
+                    <p class="role co-leader">Co-Leader</p>
+                </div>
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/Maverick Cole.jpg" alt="Maverick Cole">
+                    </div>
+                    <p class="name">Ly Bungkorng</p>
+                    <p class="role member">Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/Maverick Cole.jpg" alt="Maverick Cole">
+                    </div>
+                    <p class="name">Mech Chomrong</p>
+                    <p class="role member">Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="profile-pic">
+                        <img src="/assest/img/members/Maverick Cole.jpg" alt="Maverick Cole">
+                    </div>
+                    <p class="name">Maverick Cole</p>
+                    <p class="role member">Member</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="footer-section" id="footer-section">
+        <div class="footer-container">
+            <div class="address-details">
+                <h3>Contact over group</h3>
+                <h4>Address Detail</h4>
+                <p><i class="ri-home-4-line"></i> Phnom Penh, Cambodia</p>
+                <p><i class="ri-phone-line"></i> (+855) 12 345 678</p>
+                <p><i class="ri-mail-line"></i> iloveyou@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=100023503474680" target="_blank">
+                        <i class="facebook ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://t.me/horttx" target="_blank">
+                        <i class="telegram ri-telegram-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hxr_ttt" target="_blank">
+                        <i class="instagram ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/rolexx_xx" target="_blank">
+                        <i class="twitterx ri-twitter-x-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-mail">
+                <h3>Contact mail</h3>
+                <p>We can’t wait to solve your problem</p>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                    
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" placeholder="Your Phone Number">
+                    
+                    <label for="message">Message for feedback</label>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                </form>
+            </div>
         </div>
-        
-    </div>
+        <div class="footer-bottom">
+            <p>Get good quality rice get healthy!</p>
+            <p>Copyright 2024© E9 / Phnom Penh Top Rice . All Right Reserved.</p>
+        </div>
+    </footer>
     <script src="assest/script.js" defer></script> 
 </body>
 </html>
