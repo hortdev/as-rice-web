@@ -220,12 +220,126 @@ body {
     transition: background-color 0.3s, transform 0.2s;
     margin-top: auto; /* Pushes button to the bottom */
 }
-
 .card button:hover {
     background-color: #15af1d;
     transform: scale(1.05);
 }
-
 .card button i {
     font-size: 1em;
+}
+.categories-section {
+    text-align: center;
+    padding: 50px;
+    color: #333;
+}
+.categories-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.categories-section p {
+    color: #7f7f7f;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px; /* Optional: Control overall width */
+    margin: 0 auto;
+}
+.category-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+}
+.category-card h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.category-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.category-card .description {
+    color: #d66161;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.category-card .uses {
+    color: #7f7f7f;
+    font-size: 0.85em;
+}
+
+
+
+
+.package-section {
+    text-align: center;
+    padding: 50px;
+    color: #333;
+}
+.package-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.package-section p {
+    color: #7f7f7f;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px; /* Optional: Control overall width */
+    margin: 0 auto;
+}
+.package-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.package-card:hover {
+    transform: translateY(-5px);
+}
+.package-card h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.package-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.package-card .description {
+    color: #d66161;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.package-card .uses {
+    color: #7f7f7f;
+    font-size: 0.85em;
 }
