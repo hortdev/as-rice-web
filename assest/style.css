@@ -140,10 +140,6 @@ html {
     padding: 15px;
     border-radius: 4px;
 }
-  
-#myBtn:hover {
-    background-color: #0A7B00;
-}
 .banner {
     position: relative;
     width: 100%;
@@ -636,7 +632,7 @@ html {
       transform: translateY(-0.1em);
     }
 }
-/* Custom button style */
+/* Custom button style for sweet alert */
 .swal2-custom-btn {
     background-color: var(--main-color); /* Base color */
     color: white;
@@ -649,6 +645,5 @@ html {
 } 
   /* Hover effect */
 .swal2-custom-btn:hover {
-    background-color: #0A7B00; /* Darker green on hover */
+    background-color: #0A7B00;
 }
-  
