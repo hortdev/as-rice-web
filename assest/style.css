@@ -134,7 +134,7 @@ html {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: var(--main-color);
+    background-color: #0A7B00;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -180,7 +180,7 @@ html {
 }
 .underline {
     width: 200px;
-    border: 1px solid #055F00;
+    border: 1px solid #0A7B00;
     margin: 0 auto 20px;
 }
 .welcome-section p {
@@ -577,7 +577,7 @@ html {
 .footer-bottom {
     text-align: center;
     background-color: var(--main-color);
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 15px;
     margin-top: 20px;
 }
@@ -599,6 +599,9 @@ html {
     overflow: hidden;
     transition: all 0.2s;
     cursor: pointer;
+}
+.send-message-btn:hover {
+    background-color: #0A7B00;
 }
 .send-message-btn span{
     display: block;
@@ -633,3 +636,19 @@ html {
       transform: translateY(-0.1em);
     }
 }
+/* Custom button style */
+.swal2-custom-btn {
+    background-color: var(--main-color); /* Base color */
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+  /* Hover effect */
+.swal2-custom-btn:hover {
+    background-color: #0A7B00; /* Darker green on hover */
+}
+  

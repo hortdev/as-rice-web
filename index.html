@@ -9,6 +9,8 @@
     <link rel="icon" href="assest/img/logo.png">
     <!-- Remix icons link -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Email Js -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -285,40 +287,30 @@
                 <p>We can’t wait to solve your problem</p>
                 <form id="contact-form">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email" name="user_email" required>
-                    
+                    <input type="email" id="email" placeholder="Your Email" name="user_email" />
+                  
                     <label for="phone">Phone number</label>
-                    <input type="tel" id="phone" placeholder="Your Phone Number" name="user_phone" required>
-                    
+                    <input type="tel" id="phone" placeholder="Your Phone Number" name="user_phone" />
+                  
                     <label for="message">Message for feedback</label>
-                    <textarea id="message" placeholder="Your Message" name="user_message" required></textarea>
-                
-                    <button class="send-message-btn" type="submit" onclick="sendMail()">
-                      <div class="svg-wrapper-1">
+                    <textarea id="message" placeholder="Your Message" name="user_message"></textarea>
+                </form>
+                <button class="send-message-btn" type="button" onclick="sendMail()">
+                    <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            height="24"
-                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path
-                              fill="currentColor"
-                              d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                            ></path>
-                          </svg>
+                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
                         </div>
-                      </div>
-                      <span>Send</span>
-                    </button>
-
-                  </form>
+                    </div>
+                    <span>Send</span>
+                </button>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Get good quality rice get healthy!</p>
             <p>Copyright 2024© E9 / Phnom Penh Top Rice . All Right Reserved.</p>
+            <p class="developer">Developed by <strong class="developer-name">HoRt</strong></p>
         </div>
     </footer>
     <script src="assest/script.js"defer></script> 

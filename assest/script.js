@@ -89,12 +89,69 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Send Mail Function
-function sendMail(){
-    let parms = {
-        email : document.getElementById("email").value,
-        phone : document.getElementById("phone").value,
-        message : document.getElementById("message").value,
+function sendMail() {
+    const form = document.getElementById("contact-form");
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+  
+    // Warning if fields are missing
+    if (!email || !phone || !message) {
+      Swal.fire({
+        icon: "warning",
+        title: "Almost There!",
+        text: "Please complete all required fields to proceed.",
+        confirmButtonText: "OK",
+        customClass: {
+          confirmButton: "swal2-custom-btn", // Use custom button style
+        },
+      });
+      return;
     }
-
-    emailjs.send("service_0gyzcta","template_yukthbi",parms).then(alert("Email Sent!"))
-}
+  
+    // Show loading alert for sending
+    Swal.fire({
+      title: "Sending...",
+      text: "Please wait while we send your message.",
+      icon: "info",
+      allowOutsideClick: false,
+      customClass: {
+        confirmButton: "swal2-custom-btn", // Use custom button style
+      },
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+  
+    const params = { email, phone, message };
+  
+    emailjs
+      .send("service_0gyzcta", "template_yukthbi", params)
+      .then(
+        () => {
+          Swal.close(); // Close loading alert
+          Swal.fire({
+            title: "Success!",
+            text: "Message sent successfully!",
+            icon: "success",
+            confirmButtonText: "OK",
+            customClass: {
+              confirmButton: "swal2-custom-btn", // Use custom button style
+            },
+          });
+          form.reset();
+        },
+        () => {
+          Swal.close(); // Close loading alert
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please check your internet connection.",
+            confirmButtonText: "Retry",
+            customClass: {
+              confirmButton: "swal2-custom-btn", // Use custom button style
+            },
+          });
+        }
+      );
+  }  
