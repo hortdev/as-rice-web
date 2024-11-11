@@ -13,20 +13,19 @@ html {
     --main-color: #055F00; /* Define the main color */
 }
 .header {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensures the header stays above other elements */
+    z-index: 1000; 
     width: 100%;
 }
 .nav-width-height {
     width: 100%;
-    height: 80px; /* Reduced height */
+    height: 50px; /* Reduced height */
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -36,7 +35,7 @@ html {
     max-width: 1000px;
     height: auto;
     position: absolute;
-    top: 10%; /* Adjusted top position */
+    top: 0%; /* Adjusted top position */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,6 +52,7 @@ html {
     position: relative;
     width: 60%; /* Reduced width */
     max-width: 500px;
+    margin-top: -15px;
 }
 
 .search-box input.search {
@@ -89,10 +89,9 @@ html {
 }
 
 .page-name {
-    top: 70%; /* Adjusted position */
+    top: 80%; /* Adjusted position */
     display: flex;
     gap: 25px; /* Reduced gap between links */
-    padding-top: 5px;
     position: relative;
 }
 
@@ -105,7 +104,7 @@ html {
 
 .animation-hover {
     color: #fff;
-    line-height: 1.5;
+    line-height: 1;
     position: relative;
 }
 
@@ -125,11 +124,32 @@ html {
     width: 100%;
     left: 0;
 }
+/* go back to top button, it appear when scroll down the website */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    background-color: #0A7B00;
+}
 .banner {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('/assest/img/banner.webp');
+    margin-top: -60px;
+    background-image: url('/assest/img/Urmatt-Rice-Cover.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,17 +209,17 @@ html {
     flex-wrap: wrap;
 }
 .service-card {
+    width: 220px;
+    height: 350px; 
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 220px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; 
-    height: 350px; 
     transition: transform 0.3s;
     opacity: 0;
     transform: translateY(50px) scale(0.8) rotate(-5deg); /* Start off-screen, smaller, rotated */
@@ -250,7 +270,7 @@ html {
     margin-top: auto; /* Pushes button to the bottom */
 }
 .service-card button:hover {
-    background-color: #15af1d;
+    background-color: #0A7B00;
     transform: scale(1.05);
 }
 .service-card button i {
@@ -407,6 +427,13 @@ html {
 }
 .team-card {
     text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+.team-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
 }
 .profile-pic {
     width: 150px; 
@@ -414,6 +441,15 @@ html {
     border-radius: 50%;
     background-color: #ccc;
     margin-bottom: 15px; 
+}
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+.team-card:hover .profile-pic img {
+    transform: scale(1.1); /* Slightly scale up image on hover */
 }
 .name {
     font-weight: bold;
@@ -529,7 +565,7 @@ html {
     border-radius: 5px;
 }
 .contact-mail textarea {
-    height: 200px;
+    height: 150px;
     background-color: #eee;
     border: none;
     padding: 10px;
@@ -547,4 +583,53 @@ html {
 }
 .footer-bottom p {
     margin: 5px 0;
+}
+.send-message-btn {
+    width: 120px;
+    margin-top: 15px;
+    font-family: inherit;
+    font-size: 20px;
+    background: var(--main-color);
+    color: white;
+    padding: 0.7em 1em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.send-message-btn span{
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+.send-message-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+.send-message-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+.send-message-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+  
+.send-message-btn:hover span {
+    transform: translateX(5em);
+}
+  
+.send-message-btn:active {
+    transform: scale(0.95);
+}
+@keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
 }
