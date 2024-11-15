@@ -15,7 +15,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
     (function(){
         emailjs.init({
             publicKey: "tY0jm12Z9jOMntoCG",
@@ -36,8 +36,12 @@
                     <i class="search-icons-style ri-search-line"></i>
                 </div>
                 <div class="icons">
-                    <i class="ri-shopping-cart-line"></i>
-                    <i class="ri-heart-line"></i>
+                    <i class="ri-shopping-cart-line">
+                        <span class="badge" id="cart-count">3</span>
+                    </i>
+                    <i class="ri-heart-line">
+                        <span class="badge" id="favorite-count">5</span>
+                    </i>
                     <i class="ri-user-3-line"></i>
                 </div>
             </div>
