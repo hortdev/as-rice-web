@@ -1,16 +1,3 @@
-// saerch icon animation style
-const searchInput = document.querySelector('.search');
-    const searchBox = document.querySelector('.search-box');
-
-    // When the input is focused, add the 'focused' class to the search box
-    searchInput.addEventListener('focus', () => {
-        searchBox.classList.add('focused');
-    });
-
-    // When the input is blurred (focus removed), remove the 'focused' class
-    searchInput.addEventListener('blur', () => {
-        searchBox.classList.remove('focused');
-    });
 
 // go back to top button
 let mybutton = document.getElementById("myBtn");
@@ -62,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Apply staggered animation delay
                 setTimeout(() => {
                     entry.target.classList.add('animate');
-                }, index * 100); // 100ms delay per card
+                }, index * 150); // 100ms delay per card
                 observer.unobserve(entry.target); // Stop observing once animated
             }
         });
@@ -83,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target); // Stop observing once animated
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     packageCards.forEach(card => observer.observe(card));
 });
