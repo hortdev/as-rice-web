@@ -48,14 +48,6 @@ html {
     width: auto;
     object-fit: contain;
 }
-
-.icons i {
-    position: relative;
-    font-size: 20px; 
-    color: #FFFFFF;
-    cursor: pointer;
-    margin-left: 15px;
-}
 .page-name {
     display: flex;
     top: 1em;
@@ -94,7 +86,7 @@ html {
     left: 0;
 }
 /* go back to top button, it appear when scroll down the website */
-#myBtn {
+#backtoTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -366,22 +358,6 @@ html {
 .package-card.animate {
     opacity: 1;
     transform: translateY(0); /* Move to its normal position */
-}
-.more-info-button {
-    transform: translate(-50%, 125%);
-    width: 60%;
-    border-radius: 1rem;
-    border: none;
-    background-color: var(--hover-color);
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
-    cursor: pointer;
 }
 .package-card:hover {
     transform: translateY(-5px);
