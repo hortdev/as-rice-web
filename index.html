@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assest/style.css">
+    <link rel="stylesheet" href="assest/css/style.css">
     <title>Phnom Penh Top Rice</title>
     <!-- Web logo -->
     <link rel="icon" href="assest/img/logo.png">
@@ -159,59 +159,99 @@
             <div class="package-container">
                 <div class="package-card">
                     <h3>GOLD</h3>
-                    <img src="/assest/img/riceImg/gold.png" alt="Gold Package">
+                    <img src="/assest/img/package/gold.png" alt="Gold Package">
                     <p class="description">Gold and Red</p>
                     <p class="uses">Elegant packaging in bold red and luxurious gold, exuding premium quality and sophistication</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('goldPackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>RED</h3>
-                    <img src="/assest/img/riceImg/red.png" alt="Red Package">
+                    <img src="/assest/img/package/red.png" alt="Red Package">
                     <p class="description">Red and Black</p>
                     <p class="uses">Bold packaging in striking red and sleek black, conveying strength and premium quality</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('redPackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>GRAY</h3>
-                    <img src="/assest/img/riceImg/gray.png" alt="Gray Package">
+                    <img src="/assest/img/package/gray.png" alt="Gray Package">
                     <p class="description">Gray and Black</p>
                     <p class="uses">Modern packaging in sophisticated gray and sleek black, offering a refined and premium look</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('grayPackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>PURPLE</h3>
-                    <img src="/assest/img/riceImg/purple.png" alt="Purple Package">
-                    <p class="description">Purple and Black</p>
+                    <img src="/assest/img/package/purple.png" alt="Purple Package">
+                    <p class="description">Purple and Gray</p>
                     <p class="uses">Luxurious packaging in rich purple and bold black, delivering an elegant and powerful appeal</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('purplePackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>GREEN</h3>
-                    <img src="/assest/img/riceImg/green.png" alt="Green Package">
+                    <img src="/assest/img/package/green.png" alt="Green Package">
                     <p class="description">Green and White</p>
                     <p class="uses">Fresh packaging in crisp white and vibrant green, evoking a clean, natural, and refreshing feel</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('greenPackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>BLUE</h3>
-                    <img src="/assest/img/riceImg/blue.png" alt="Blue Package">
+                    <img src="/assest/img/package/blue.png" alt="Blue Package">
                     <p class="description">Blue and Gold</p>
                     <p class="uses">Elegant packaging in deep blue and shimmering gold, combining sophistication with a touch of luxury</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('bluePackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>White</h3>
-                    <img src="/assest/img/riceImg/white.png" alt="White Package">
+                    <img src="/assest/img/package/white.png" alt="White Package">
                     <p class="description">White and Black</p>
                     <p class="uses">Chic packaging in classic white and bold black, offering a timeless, stylish, and modern look</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('whitePackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
                 <div class="package-card">
                     <h3>ORANGE</h3>
-                    <img src="/assest/img/riceImg/orange.png" alt="Orange Package">
+                    <img src="/assest/img/package/orange.png" alt="Orange Package">
                     <p class="description">Orange and Red</p>
                     <p class="uses">Vibrant packaging in energetic orange and fiery red, creating a bold and dynamic visual impact</p>
-                    <button class="more-info-button">More Info</button>
+                    <button 
+                        class="more-info-button" 
+                        onclick="navigateToPage('orangePackage.html');"
+                    >
+                        More Info
+                    </button>
                 </div>
             </div>
         </section>
@@ -315,11 +355,23 @@
                 </button>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="bottom: 0%;">
             <p>Copyright 2024© E9 / Phnom Penh Top Rice . All Right Reserved.</p>
             <p class="developer">Developed by <strong class="developer-name">HoRt</strong></p>
         </div>
     </footer>
-    <script src="assest/script.js"defer></script> 
+
+    <!-- Loader HTML -->
+    <div class="loaderRectangle" id="loadingAnimation">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    
+   <script src="/assest/js/script.js"></script>
+   <script src="/assest/js/itemsDetail.js"></script>
 </body>
 </html>
