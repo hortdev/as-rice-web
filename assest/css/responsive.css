@@ -1,0 +1,122 @@
+/* Media query for tablet screens (e.g., 768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .logo img {
+        height: 60px; 
+    }
+
+    .page-name {
+        font-size: 16px; 
+        gap: 20px;
+    }
+
+    .page-name a {
+        font-size: 0.75em; 
+    }
+}
+
+/* Media query for mobile screens (e.g., 480px to 768px) */
+@media screen and (max-width: 768px) {
+    .nav-width-height {
+        padding: 8px 10px; 
+    }
+
+    .logo img {
+        height: 50px; 
+        margin-top: 5px; 
+    }
+
+    .page-name {
+        font-size: 16px; 
+        gap: 8px; 
+        top: 40%;
+        margin-left: 15px; 
+    }
+
+    .page-name a {
+        font-size: 0.6em; 
+    }
+
+    .nav-items {
+        padding: 0 10px; 
+    }
+    .banner {
+        height: 50vh; 
+    }
+
+    .overlay {
+        width: 50%; 
+        height: 60px; 
+        top: 55%; 
+    }
+
+    .overlay h1 {
+        font-size: 0.8em; 
+    }
+    .welcome-section h1 {
+        font-size: 1.5em;
+       
+    }
+    .underline {
+        width: 150px;
+    }
+    .welcome-section p {
+        font-size: 1em;
+    }
+    .card-container {
+        gap: 10px;
+        justify-content: center;
+    }
+    .service-card {
+        width: calc(39% - 10px);
+        height: auto; 
+    }
+    .card-container {
+        gap: 10px; /* Keep a small gap */
+    }
+    .service-card button {
+        font-size: 0.6em;
+    }
+    .service-card button i {
+        font-size: 1em;
+    }
+    .team-card {
+        width: 100px;
+        height: 150px;
+    }
+    .team-card:hover {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    } 
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    .name {
+        font-size: 0.8em;
+    }
+    
+    .role {
+        font-size: 0.6em;
+    }
+    .team-section h2 {
+        font-size: 2em;
+    }
+    
+    .team-section p.subtitle {
+        font-size: 1em; 
+    }
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .address-details {
+        
+    }
+    .contact-mail form {
+        width: 100%; /* Ensure form takes up full width */
+        max-width: 400px; /* Limit form width on small screens */
+    }
+    .contact-form label {
+        left: 0%;
+    }
+}
