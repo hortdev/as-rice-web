@@ -1,3 +1,24 @@
+// Toggle the visibility of the menu (open/close)
+function toggleMenu() {
+  const menu = document.querySelector('.page-name');
+  if (menu.classList.contains('show')) {
+    menu.classList.remove('show');
+  } else {
+    menu.classList.add('show');
+  }
+}
+
+// Close the menu when a menu item is clicked
+function closeMenu() {
+  const menu = document.querySelector('.page-name');
+  menu.classList.remove('show'); // Remove the 'show' class to hide the menu
+}
+
+// Add event listener to each menu link to close the menu when clicked
+document.querySelectorAll('.page-name a').forEach(item => {
+  item.addEventListener('click', closeMenu);
+});
+
 
 // go back to top button
 let mybutton = document.getElementById("backtoTopBtn");
@@ -142,3 +163,29 @@ function sendMail() {
         }
       );
   }  
+
+// scroll with a href
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+
+      const targetId = this.getAttribute('href').substring(1); // Get the target ID (removes the "#")
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+          // Scroll to the target element with an offset to account for fixed header
+          window.scrollTo({
+              top: targetElement.offsetTop - 60, // Adjust the offset to match your fixed header height
+              behavior: 'smooth'
+          });
+      }
+  });
+});
+
+// Go to Top Button with Smooth Scroll
+document.getElementById("backtoTopBtn").addEventListener('click', function() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});

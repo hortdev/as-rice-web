@@ -1,8 +1,10 @@
 /* Reset and basic styling */
+* {
+    box-sizing: border-box; /* Prevents margin/padding issues */
+}
 body {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFFFFF;
@@ -14,16 +16,25 @@ html {
     --main-color: #055F00; 
     --hover-color: #0A7B00;
 }
+.menu-icon i {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #FFFFFF;
+}
 .header {
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 100; 
     width: 100%;
 }
 /* General Navigation Styles */
 .nav-width-height {
     width: 100%;
-    height: 50px;
+    height: 70px;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -257,9 +268,10 @@ html {
     justify-content: center; 
     gap: 20px; 
     padding: 20px;
-    max-width: calc(300px * 4 + 20px * 3); 
+    max-width: calc(300px * 4 + 20px * 3); /* Maximum width for 4 cards */
     margin: 0 auto; 
 }
+
 .category-card {
     width: 200px; 
     height: 400px; 
@@ -350,7 +362,7 @@ html {
     justify-content: center; 
     gap: 20px; 
     padding: 20px;
-    max-width: calc(300px * 4 + 20px * 3); 
+    max-width: calc(300px * 4 + 20px * 3); /* Maximum width for 4 cards */
     margin: 0 auto; 
 }
 .package-card {

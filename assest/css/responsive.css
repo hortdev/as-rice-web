@@ -1,122 +1,249 @@
-/* Media query for tablet screens (e.g., 768px to 1024px) */
-@media screen and (max-width: 1024px) {
-    .logo img {
-        height: 60px; 
+:root {
+    --main-color: #055F00; 
+    --hover-color: #0A7B00;
+}
+/* Desktop (4 cards per row) */
+@media (min-width: 1024px) {
+    .categories-container,
+    .package-container {
+        max-width: calc(250px * 4 + 20px * 3); /* 4 cards max with spacing */
     }
-
-    .page-name {
-        font-size: 16px; 
+    
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 20px;
+        max-width: calc(250px * 3 + 20px * 2); /* 3 cards per row */
+        margin: 0 auto;
     }
-
-    .page-name a {
-        font-size: 0.75em; 
+    
+    .team-container > div {
+        flex: 0 0 calc(33.33% - 20px); /* 3 cards per row with space */
     }
 }
 
-/* Media query for mobile screens (e.g., 480px to 768px) */
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: calc(250px * 2 + 20px * 1); /* 2 cards with spacing */
+        margin: 0 auto;
+    }
+
+    .team-container > div {
+        flex: 0 0 calc(50% - 20px); /* 2 cards per row with space */
+    }
+    .page-name {
+        position: absolute;
+        top: 40%;
+        margin-left: 40px;
+    }
+}
+/* Mobile (480px to 768px) */
 @media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
     .nav-width-height {
+        width: auto;
         padding: 8px 10px; 
     }
 
     .logo img {
-        height: 50px; 
-        margin-top: 5px; 
+        height: 70px;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 200;
+    }
+
+    .menu-icon i {
+        display: block;
     }
 
     .page-name {
-        font-size: 16px; 
-        gap: 8px; 
-        top: 40%;
-        margin-left: 15px; 
+        width: 100%;
+        height: 370px;
+        position: absolute;
+        top: 70px;
+        right: 1px;
+        background-color: rgba(0, 0, 0, 0.767);
+        flex-direction: column;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(0); /* Keep it aligned */
+        transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        z-index: 999;
+    }
+
+    .page-name.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0); /* No horizontal shift on activation */
     }
 
     .page-name a {
-        font-size: 0.6em; 
+        padding: 10px 0 0 0;
+        font-size: 1em;
+        color: #dbd7d7;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: 0.1s;
+    }
+
+    .page-name.show a {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.2s;
+    }
+
+    .animation-hover {
+        display: inline-block;
+    }
+
+    .animation-hover::before {
+        left: 0;
+        width: 0; /* Start the line with zero width */
+    }
+
+    /* Mobile hover effect */
+    .animation-hover:hover::before {
+        width: 50%; /* Underline will only span 50% of the text */
+        left: 25%; /* Center the underline (start at 25%) */
     }
 
     .nav-items {
-        padding: 0 10px; 
+        padding: 0 10px;
     }
+
     .banner {
-        height: 50vh; 
+        height: 40vh;
     }
 
     .overlay {
-        width: 50%; 
-        height: 60px; 
-        top: 55%; 
+        width: 60%;
+        height: 60px;
+        top: 55%;
     }
 
     .overlay h1 {
-        font-size: 0.8em; 
+        font-size: 0.8em;
     }
+
     .welcome-section h1 {
         font-size: 1.5em;
-       
     }
+
     .underline {
         width: 150px;
     }
+
     .welcome-section p {
         font-size: 1em;
     }
+
     .card-container {
         gap: 10px;
         justify-content: center;
     }
+
     .service-card {
-        width: calc(39% - 10px);
-        height: auto; 
+        height: auto;
+        flex-grow: 1;
     }
-    .card-container {
-        gap: 10px; /* Keep a small gap */
-    }
+
     .service-card button {
         font-size: 0.6em;
     }
+
     .service-card button i {
         font-size: 1em;
     }
+
+    .category-card {
+        width: 250px;
+        height: 100%;
+    }
+
+    .package-card {
+        width: 250px;
+        height: auto;
+    }
+
+    /* Keep your mobile-friendly team card size */
     .team-card {
         width: 100px;
-        height: 150px;
+        height: 200px;
     }
+
     .team-card:hover {
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    } 
+    }
+
     .profile-pic {
         width: 100px;
         height: 100px;
     }
+
     .name {
         font-size: 0.8em;
     }
-    
+
     .role {
         font-size: 0.6em;
     }
+
     .team-section h2 {
         font-size: 2em;
     }
-    
+
     .team-section p.subtitle {
-        font-size: 1em; 
-    }
-    .footer-container {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center items horizontally */
+        font-size: 1em;
     }
 
-    .address-details {
-        
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .address-details {}
+
     .contact-mail form {
-        width: 100%; /* Ensure form takes up full width */
-        max-width: 400px; /* Limit form width on small screens */
+        width: 100%;
+        max-width: 400px;
     }
+
     .contact-form label {
         left: 0%;
+    }
+
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: calc(250px * 2 + 20px * 1); /* 2 cards with spacing */
+        margin: 0 auto;
+    }
+
+    .team-container > div {
+        flex: 0 0 calc(50% - 20px); /* 50% width for each team card */
     }
 }
