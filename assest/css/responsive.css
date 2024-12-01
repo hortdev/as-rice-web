@@ -160,35 +160,118 @@
     }
 
     .card-container {
-        gap: 10px;
-        justify-content: center;
+        gap: 10px; /* Reduce gap between cards for mobile */
     }
 
     .service-card {
-        height: auto;
-        flex-grow: 1;
+        flex: 0 1 calc(50% - 10px); /* Each card takes up 50% of the width minus padding */
+        max-width: calc(50% - 10px); /* Ensure the cards fit properly */
+        height: auto; /* Allow height to adjust naturally */
+        margin: 0 auto; /* Center each card */
     }
 
     .service-card button {
-        font-size: 0.6em;
+        font-size: 0.6em; /* Keep button size consistent */
+        padding: 10px 20px; /* Adjust padding for buttons */
     }
 
     .service-card button i {
         font-size: 1em;
     }
-
-    .category-card {
-        width: 250px;
-        height: 100%;
+    .service-card h3 {
+        font-size: 1em; /* Slightly smaller font size */
+        margin-bottom: 10px; /* Adjust spacing */
     }
-
+    
+    .service-card p {
+        font-size: 0.9em; /* Maintain legibility */
+        line-height: 1.5; /* Ensure good line spacing */
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Limit text to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate text with ellipsis */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .service-card img {
+        width: 50px; /* Maintain image size proportional to card */
+        height: 50px; /* Ensure aspect ratio is consistent */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .categories-container {
+        padding: 0; /* Ensure no left-right padding on mobile */
+        margin: 0; /* Optional: remove margin on mobile */
+    }
+    .category-card {
+        flex: 0 1 calc(50% - 10px); /* Each card takes up 50% of the width minus padding */
+        max-width: calc(50% - 10px); /* Ensure the cards fit properly */
+        height: auto; /* Allow height to adjust naturally */
+        margin: 0 auto; /* Center each card */
+    }
+    .category-card h3 {
+        font-size: 0.8em; /* Slightly smaller font size */
+    }
+    .category-card .description {
+        font-size: 0.8em; /* Maintain legibility */
+        line-height: 1; /* Ensure good line spacing */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit text to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate text with ellipsis */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .category-card .uses {
+        font-size: 0.8em; /* Maintain legibility */
+        line-height: 1.5; /* Ensure good line spacing */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit text to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate text with ellipsis */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .package-container {
+        padding: 0; /* Ensure no left-right padding on mobile */
+        margin: 0; /* Optional: remove margin on mobile */
+    }
     .package-card {
-        width: 250px;
-        height: auto;
+        flex: 0 1 calc(50% - 10px); /* Each card takes up 50% of the width minus padding */
+        max-width: calc(50% - 10px); /* Ensure the cards fit properly */
+        height: auto; /* Allow height to adjust naturally */
+        margin: 0 auto; /* Center each card */
+    }
+    .package-card h3 {
+        font-size: 0.8em; /* Slightly smaller font size */
+    }
+    .package-card .description {
+        font-size: 0.8em; /* Maintain legibility */
+        line-height: 1; /* Ensure good line spacing */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit text to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate text with ellipsis */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .package-card .uses {
+        font-size: 0.8em; /* Maintain legibility */
+        line-height: 1.5; /* Ensure good line spacing */
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit text to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Truncate text with ellipsis */
+        margin-bottom: 10px; /* Adjust spacing */
+    }
+    .more-info-button {
+        width: 80%;
+        font-size: 0.8em; /* Keep button size consistent */
     }
 
     /* Keep your mobile-friendly team card size */
     .team-card {
+        margin-top: -30px;
         width: 100px;
         height: 200px;
     }
@@ -207,10 +290,11 @@
     }
 
     .role {
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
 
     .team-section h2 {
+        margin-top: 30px;
         font-size: 2em;
     }
 
@@ -223,8 +307,12 @@
         align-items: center;
     }
 
-    .address-details {}
-
+    .address-details {
+        margin-top: -30px;
+    }
+    .contact-mail {
+        margin-top: 20px;
+    }
     .contact-mail form {
         width: 100%;
         max-width: 400px;

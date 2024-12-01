@@ -1,10 +1,10 @@
 /* Reset and basic styling */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box; /* Prevents margin/padding issues */
 }
 body {
-    padding: 0;
-    margin: 0;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFFFFF;
@@ -162,10 +162,11 @@ html {
     line-height: 1.6;
 }
 .service-section {
+    max-width: 100%;
     text-align: center;
     background-image: url('/assest/img/banner1.webp'); 
     background-size: cover;
-    padding: 50px;
+    padding: 20px;
     color: #333;
 }
 .service-section h2 {
@@ -248,8 +249,9 @@ html {
     font-size: 1em;
 }
 .categories-section {
+    max-width: 100%;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     color: #333;
 }
 .categories-section h2 {
@@ -267,7 +269,7 @@ html {
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 20px; 
-    padding: 20px;
+    padding: 0;
     max-width: calc(300px * 4 + 20px * 3); /* Maximum width for 4 cards */
     margin: 0 auto; 
 }
@@ -341,10 +343,10 @@ html {
     font-size: 0.85em;
 }
 .package-section {
+    max-width: 100%;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     color: #333;
-    margin-top: -30px;
 }
 .package-section h2 {
     font-size: 2em;
