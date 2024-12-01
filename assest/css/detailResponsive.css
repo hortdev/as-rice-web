@@ -45,6 +45,9 @@
     .footer-bottom {
         position: absolute;
     }
+    .planning-footer {
+        position: absolute;
+    }
 }
 
 @media (max-width: 767px) {
