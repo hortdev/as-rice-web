@@ -16,6 +16,7 @@ html {
     --main-color: #055F00; 
     --hover-color: #0A7B00;
 }
+
 .menu-icon i {
     display: none;
     cursor: pointer;
@@ -642,21 +643,21 @@ html {
 .send-message-btn:hover svg {
     transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
-  
+
 .send-message-btn:hover span {
     transform: translateX(5em);
 }
-  
+
 .send-message-btn:active {
     transform: scale(0.95);
 }
 @keyframes fly-1 {
     from {
-      transform: translateY(0.1em);
+        transform: translateY(0.1em);
     }
-  
+
     to {
-      transform: translateY(-0.1em);
+        transform: translateY(-0.1em);
     }
 }
 /* Custom button style for sweet alert */
@@ -664,4 +665,108 @@ html {
     width: 100px;
     height: 50px;
     cursor: pointer;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials h1 {
+    margin-bottom: 20px;
+}
+
+.rating-overview {
+    margin: 20px 0;
+}
+
+.rating-overview .stars {
+    font-size: 24px;
+    color: #ffc107;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial {
+    width: 300px; /* Global width */
+    height: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.95) rotate(-10deg);
+    transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.testimonial.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.testimonial:hover {
+    transform: translateY(-12px) rotateY(5deg) scale(1.05);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.testimonial:hover img {
+    transform: rotate(12deg);
+    transition: transform 0.3s ease-out;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px auto;
+    object-fit: cover;
+    border: 2px solid #ffc107;
+    transition: transform 0.3s ease;
+}
+
+.testimonial h3 {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial .testimonial-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.testimonial .stars {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+
+.testimonial .testimonial-text {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #555;
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }

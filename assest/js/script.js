@@ -22,6 +22,13 @@ document.querySelectorAll('.page-name a').forEach(item => {
 
 // go back to top button
 let mybutton = document.getElementById("backtoTopBtn");
+// Go to Top Button with Smooth Scroll
+document.getElementById("backtoTopBtn").addEventListener('click', function() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -182,10 +189,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Go to Top Button with Smooth Scroll
-document.getElementById("backtoTopBtn").addEventListener('click', function() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all testimonial elements
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  // Create an intersection observer instance
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+          // When a testimonial enters the viewport
+          if (entry.isIntersecting) {
+              // Add the 'show' class to animate the testimonial
+              setTimeout(() => {
+                  entry.target.classList.add('show');
+              }, index * 200); // Stagger the animation by 200ms per element
+
+              // Stop observing after the animation has started
+              observer.unobserve(entry.target);
+          }
+      });
+  }, {
+      threshold: 0.5 // Trigger the animation when 50% of the element is in view
+  });
+
+  // Observe each testimonial
+  testimonials.forEach(testimonial => {
+      observer.observe(testimonial);
   });
 });

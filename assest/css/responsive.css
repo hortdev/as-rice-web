@@ -56,7 +56,6 @@
     html {
         scroll-behavior: smooth;
     }
-
     .nav-width-height {
         width: auto;
         padding: 8px 10px; 
@@ -337,4 +336,37 @@
     .footer-bottom {
         font-size: 0.8em;
     }
+    .testimonials-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .testimonial {
+        width: 45%;
+        height: 280px;
+        padding: 15px;
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+    
+    .testimonial img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .testimonial h3 {
+        font-size: 1.1rem;
+    }
+    
+    .testimonial .testimonial-text {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }    
 }
